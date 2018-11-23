@@ -6,7 +6,8 @@ class Eureka < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "install"
+    system "go", "build", "-o", "eureka"
+    bin.install "eureka"
   end
 
 end
